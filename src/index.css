@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserra Alternates',sans-serif;
+}
+body{
+  background: url(../img/pexels-mateusz-dach-450035.jpg);
+  background-size: 100vmax 100vh;
+  background-repeat: no-repeat;
+  
+}
+.App{
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+.conteiner{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+
+}
+.logo{
+  display: inline-block;
+}
+.btn-menu{
+  float: left;
+  line-height: 70px;
+}
+.conteiner .btn-menu label{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  cursor: pointer;
+}
+.logo a{
+  color: #fff;
+  font-weight: 400;
+  font-size: 40px;
+  margin-left: 10px;
+  line-height: 70px;
+  text-decoration: none;
+  
+}
+.conteiner .menu{
+  float: right;
+  line-height: 100px;
+}
+.conteiner .menu a{
+  display: inline-block;
+  padding: 15px;
+  line-height: normal;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.conteiner .menu a:hover{
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+#btn-menu{
+  display: none;
+}
+.container-menu{
+ position: absolute;
+ background: rgba(0, 0, 0, .1 ); 
+ width: 100%;
+ height: 100vh;
+ top: 0;
+ left: 0;
+ transition: all 500ms ease;
+ opacity: 0;
+ visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+  opacity: 1;
+ visibility: visible;
+}
+
+.cont-menu{
+  width: 100%;
+  max-width: 250px;
+  background: #1c1c1c;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+  transform: translateX(0%);
+}
+.cont-menu nav{
+  transform: translateY(15%);
+}
+.cont-menu nav a{
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 500ms ease;
+}
+.cont-menu nav a:hover{
+  border-left: 5px solid #c7c7c7;
+  background: #1f1f1f;
+}
+.cont-menu label{
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+
+}
+@media (min-width:900px){
+  .icon-menu{
+visibility: hidden;
+
+  } 
+  .cont-info{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+  }
+  .info-yo{
+    position: absolute;
+    top: 600px;
+    right: 200px;
+  }
+}
+@media (max-width:899px){
+.menu{
+  visibility: hidden;
+}
+.cont-info{
+  display: inline-block;
+  margin: 10%;
+}.info-yo{
+ display: inline;
+ margin: 10%;
+  }
+}
+.inf-title{
+  display: flex;
+  width: 500px;
+  height: 40px;
+  color: #fff;
+  font-size: 35px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.inf-title ul{
+  list-style: none;
+  padding-left: 10px;
+  animation: cambiar 7s infinite;
+  color: rgb(47, 137, 216);
+}
+.inf-title ul,p{
+  margin: 0;
+
+}
+@keyframes cambiar{
+  0%{
+    margin-top:0 ;
+  }
+  20%{
+    margin-top: 0;
+  }
+  45%{
+    margin-top: -40px;
+  }
+  75%{
+    margin-top: -40px;
+  }
+  
+  100%{
+    margin-top: 0;
+  }
+}
+.info-p{
+  max-width: 300px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+.cont-info{
+  
+  display: inline-block;
+
+}
+.info-yo{
+ 
+ max-width: 30%;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+
+}
+.info-yo h2{
+  margin-bottom: 10px;
+  color: rgb(47, 137, 216);
+}
+
+.info-yo p{
+  margin-bottom: 10px;
+}
+.info-yo b{
+  color: aqua;
+}
